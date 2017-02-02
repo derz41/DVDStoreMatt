@@ -6,7 +6,22 @@
 <ui:composition  template="template.xhtml">
 
     <ui:define name="body">
-        
+        <h:form>
+        <h:panelGrid columns="3">
+            <h:outputText value="First Name" />
+            <h:inputText id="first" value="#{actorController.firstName}"
+                         size="50" maxlength="45" required="true" label="First Name" />
+            <h:message for="first" style="color: red; font-size: 0.7em" />
+            
+            <h:outputText value="Last Name" />
+            <h:inputText id="last" value="#{actorController.lastName}"
+                         size="50" maxlength="45" required="true" label="Last Name" />
+            <h:message for="last" style="color: red; font-size: 0.7em" />
+        </h:panelGrid>
+            <h:commandButton id="submit" value="submit" action="actor" />
+            <h:commandButton value="Clear" type="reset" />
+        </h:form>
+        <h:outputText escape="false" value="#{actorController.response}" />
     </ui:define>
 
 </ui:composition>

@@ -4,6 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/src/java/dvdrental/HibernateUtil.java</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/src/java/dvdrental/Actor.java</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/src/java/hibernate.reveng.xml</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/src/java/dvdrental/Actor.hbm.xml</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/web/film.xhtml</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/web/actor.xhtml</file>
+            <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/web/template.xhtml</file>
             <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/web/index.xhtml</file>
             <file>file:/C:/Users/Matt/Documents/NetBeansProjects/DVDStoreMatt/src/java/hibernate.cfg.xml</file>
         </group>
