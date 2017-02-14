@@ -10,38 +10,38 @@
         <h:form>
             <h:panelGrid columns="3">
                 <h:outputText value="Title"/>
-                <h:inputText id="title" value="" size="50" maxlength="255"
+                <h:inputText id="title" value="#{filmActorController.title}" size="50" maxlength="255"
                              required="true" label="Title" />
                 <h:message for="title" style="color: red; font-size: 0.7em" />
                 
                 <h:outputText value="Descrition"/>
-                <h:inputTextarea id="description" value="" required="true"
+                <h:inputTextarea id="description" value="#{filmActorController.description}" required="true"
                                  rows="4" cols="40" label="Description" />
                 <h:message for="description" style="color: red; font-size: 0.7em" />
                 
                 <h:outputText value="Actor Name" />
-                <h:selectOneMenu value="" >
+                <h:selectOneMenu value="#{filmActorController.actor}" >
                     <f:selectItems value="#{filmActorController.actorValues}" var="a"
                                    itemLabel="#{a.firstName} #{a.lastName}" itemValue="#{a.actorId}" />
                 </h:selectOneMenu>
                 <h:outputText value=" " />
                 
                 <h:outputText value="Film Category" />
-                <h:selectOneMenu value="" >
+                <h:selectOneMenu value="#{filmActorController.category}" >
                     <f:selectItems value="#{filmActorController.categoryValues}" var="c"
                                    itemLabel="#{c.name}" itemValue="#{c.categoryId}" />
                 </h:selectOneMenu>
                 <h:outputText value=" " />
                 
                 <h:outputText value="Language" />
-                <h:selectOneMenu value="" >
+                <h:selectOneMenu value="#{filmActorController.language}" >
                     <f:selectItems value="#{filmActorController.languageValues}" var="l"
                                    itemLabel="#{l.name}" itemValue="#{l.languageId}" />
                 </h:selectOneMenu>
                 <h:outputText value=" " />
                 
                 <h:outputText value="Rating" />
-                <h:selectOneMenu value="" >
+                <h:selectOneMenu value="#{filmActorController.rating}" >
                     <f:selectItem itemLabel="G" itemValue="G" />
                     <f:selectItem itemLabel="PG" itemValue="PG" />
                     <f:selectItem itemLabel="PG-13" itemValue="PG-13" />
@@ -54,7 +54,7 @@
             <h:commandButton id="submit" value="Submit" action="film" />
             <h:commandButton value="Clear" type="reset" />
         </h:form>
-        <h:outputText escape="false" value="" />
+        <h:outputText escape="false" value="#{filmActorController.response}" />
     </ui:define>
 
 </ui:composition>
