@@ -7,6 +7,12 @@
     <ui:composition template="template.xhtml">
         <ui:define name="body">
             <h:form>
+                <span>
+                    <h:commandLink action="#{filmController.previous()}" value="Previous #{filmController.pageSize}" rendered="#{filmController.hasPreviousPage}"/>
+                </span>
+                <span>
+                    <h:commandLink action="#{filmController.next()}" value="Next #{filmController.pageSize}" rendered="#{filmController.hasNextPage}"/>
+                </span>
                 <h:dataTable value="#{filmController.filmTitles}" var="item" border="0" cellpadding="2" cellspacing="0">
                     <h:column>
                         <f:facet name="header">
@@ -14,11 +20,17 @@
                         </f:facet>
                         <h:outputText value="#{item.title}" />
                     </h:column>
-                     <h:column>
+                    <h:column>
                         <f:facet name="header">
                             <h:outputText value="Description"/>
                         </f:facet>
                         <h:outputText value="#{item.description}" />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value=" "/>
+                        </f:facet>
+                        <h:commandLink action="#{filmController.prepareView()}" value ="View" />
                     </h:column>
                 </h:dataTable>
             </h:form>
